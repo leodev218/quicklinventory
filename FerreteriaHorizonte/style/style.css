@@ -1,0 +1,19 @@
+
+
+/*FOOTER*/
+#carouselExampleDark {
+margin: 10px;
+height: 600px;
+}
+.carousel-item {
+    height: 500px;
+}
+.card-body {
+    color: lightgrey;
+}
+.card-title {
+    color: black;
+}
+.card-text {
+    color: black;
+}
