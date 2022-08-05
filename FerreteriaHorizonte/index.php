@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <title>ferreteria horizonte</title>
     <!-- Required meta tags -->
@@ -12,12 +12,12 @@
   </head>
   <body>
   <!-- BARRA DE NAVEGACION-->    
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <div class="collapse navbar-collapse"  id="navbarTogglerDemo01">
     <a class="navbar-brand" href="#">
               <img src="img/Saman.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
             FastFile
@@ -29,25 +29,34 @@
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                Opciones
               </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">crear producto</a></li>
-                <li><a class="dropdown-item" href="#">ver producto</a></li>
-                <li><a class="dropdown-item" href="#">modificar producto</a></li>
-                <li><a class="dropdown-item" href="#">borrar producto</a></li>
+              <ul class="dropdown-menu text-light bg-dark table-hover">
+                <li><a class="dropdown-item text-light" href="#">crear producto</a></li>
+                <li><a class="dropdown-item text-light" href="#">ver producto</a></li>
+                <li><a class="dropdown-item text-light" href="#">modificar producto</a></li>
+                <li><a class="dropdown-item text-light" href="#">borrar producto</a></li>
               </ul>
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
-        <button class="btn btn-outline-success" type="submit">Inicio</button>
+        <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Configuracion</button>
+        <input class="form-control me-2 text-dark bg-dark" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-dark" type="submit">Buscar</button>
+        <button class="btn btn-dark" type="submit">Inicio</button>
       </form>
     </div>
   </div>
 </nav>
-
+<div class="offcanvas offcanvas-bottom bg-dark" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body small">
+    ...
+  </div>
+</div>
     <!-- ETIQUETAS-->  
-    <ul class="nav justify-content-center">
+    <ul class="nav justify-content-center bg-dark">
         <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Producto
