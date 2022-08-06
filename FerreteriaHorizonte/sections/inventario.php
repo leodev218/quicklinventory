@@ -1,5 +1,5 @@
 <?php include "../templates/header.php" ?>
 
-Pagina orden
+Pagina inventario
 
 <?php include "../templates/footer.php"?>
