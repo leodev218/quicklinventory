@@ -1,5 +1,9 @@
-<?php include "../templates/header.php" ?>
+<!-- CABECERA/ HEADER DE LA APP-->
+<?php include ("../templates/header.php")?>
 
-Pagina factura
+<!-- CUERPO/ BODY DE LA APP-->
 
-<?php include "../templates/footer.php"?>
+
+FACTURA
+<!-- PIE/ FOOTER DE LA APP-->
+<?php include ("../templates/footer.php")?>

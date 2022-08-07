@@ -1,27 +1,24 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
-    <title>ferreteria horizonte</title>
+    <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../style/style.css"> 
-    <link rel="stylesheet" href="../style/sidebars.css">
+
     <!-- Bootstrap CSS v5.2.0-beta1 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
   </head>
   <body>
- <!-- BARRA DE NAVEGACION--> 
- 
- <div class="container-fluid bg-secondary">
+        <div class="container-fluid bg-secondary">
             <div class="row" id="navbar">
                 <div class="col-12 col-md-4 col-xl-4 text-white bg-dark">
                
                       <center>
-                         <a href="../sections/index.php" id="main-icon" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none fs-4">
-                             <img src="../img/Saman.png" alt="" width="30" height="24" class="d-inline-block align-text-top">FastFile
-                         </a>
+                      <a href="../sections/index.php" id="main-icon" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none fs-4">
+                                  <img src="../img/Saman.png" alt="" width="30" height="24" class="d-inline-block align-text-top">FastFile
+                                  </a>
                       </center>          
 
                 </div>
@@ -58,7 +55,9 @@
              
             </div>
         </div>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 
-<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="../javascript/sidebars.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  </body>
+</html>

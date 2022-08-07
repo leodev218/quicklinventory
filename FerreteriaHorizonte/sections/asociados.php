@@ -1,5 +1,9 @@
-<?php include "../templates/header.php" ?>
+<!-- CABECERA/ HEADER DE LA APP-->
+<?php include ("../templates/header.php")?>
 
-Pagina principal de asociados, para crear y gestionar clientes y proveedores
+<!-- CUERPO/ BODY DE LA APP-->
 
-<?php include "../templates/footer.php"?>
+
+CREAR CLIENTE O PROVEEDOR
+<!-- PIE/ FOOTER DE LA APP-->
+<?php include ("../templates/footer.php")?>
