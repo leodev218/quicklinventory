@@ -16,13 +16,11 @@
  
  <div class="container-fluid bg-secondary">
             <div class="row" id="navbar">
-                <div class="col-12 col-md-4 col-xl-4 text-white bg-dark">
-               
-                      <center>
+                <div class="col-12 col-md-4 col-xl-4 text-white bg-dark justify-content-  center">
+              
                          <a href="../sections/index.php" id="main-icon" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none fs-4">
                              <img src="../img/Saman.png" alt="" width="30" height="24" class="d-inline-block align-text-top">FastFile
-                         </a>
-                      </center>          
+                         </a>         
 
                 </div>
                 <div class="col-12 col-md-8 col-xl-8 text-white bg-dark">
@@ -48,6 +46,7 @@
                         </li>
                         <li>
                             <a href="../sections/asociados.php" class="nav-link text-white">
+                              
                                 <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
                                 Clientes
                             </a>
@@ -58,6 +57,8 @@
              
             </div>
         </div>
+
+          
 
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
