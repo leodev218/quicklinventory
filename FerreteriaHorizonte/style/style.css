@@ -1,4 +1,16 @@
+/*HEADER*/
 
+#secciones {
+    width: 100%;
+}
+#navbar {
+    height: 60px;
+}
+#main-icon {
+    margin-top: 15px;
+}
+
+/*BODY*/
 
 /*FOOTER*/
 #carouselExampleDark {
@@ -17,3 +29,9 @@ height: 600px;
 .card-text {
     color: black;
 }
+/* CUERPO */
+.container {
+    height: 100%;
+    width: 100%;
+}
+

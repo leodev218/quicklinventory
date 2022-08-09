@@ -26,7 +26,7 @@
       
       </ul>
       <form class="d-flex">
-        <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">configuracion</button>
+        <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Configuracion</button>
         <input class="form-control me-2 text-primary bg-dark" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-dark" type="submit">Buscar</button>
         <button class="btn btn-dark" type="submit">Inicio</button>
@@ -34,15 +34,15 @@
     </div>
   </div>
 </nav>
-<form class="row g-3 justify-content-center">
+<form class="row g-3 justify-content-center" action="../sections/index.php" method="$_POST">
   <div class="col-auto">
   <label for="inputPassword2" class="visually-hidden">correo</label><br>
     <input type="password" class="form-control" id="inputPassword2" placeholder="Correo electronico"><br> 
     <label for="inputPassword2" class="visually-hidden">Password</label><br>
     <input type="password" class="form-control" id="inputPassword2" placeholder="Password"><br> 
     <nav class="navbar navbar-light bg-light">
-    <button class="btn btn-dark" type="button">Main button</button>
-    <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
+    <button class="btn btn-dark" type="submit" ">Confirmar</button>
+    <button class="btn btn-sm btn-outline-secondary" type="button">Cancelar</button>
 </div><br>
 </form>
 
