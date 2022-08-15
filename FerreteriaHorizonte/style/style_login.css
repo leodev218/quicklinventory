@@ -1,6 +1,6 @@
 /*ESTILOS DE LOGIN*/
-.login {
-    margin-top: 30px;
-    width: 400px;
+div .signin {
+    background-color: black;
     height: 500px;
+    width: 350px;
 }

@@ -11,123 +11,88 @@
 
   </head>
   <body>
-        <div class="container-fluid bg-secondary">
-            <div class="row" id="navbar">
-                <div class="col-12 col-md-4 col-xl-4 text-white bg-dark">
-               
-                      <center>
-                      <a href="../sections/index.php" id="main-icon" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none fs-4">
-                                  <img src="../img/Saman.png" alt="" width="30" height="24" class="d-inline-block align-text-top">FastFile
-                                  </a>
-                      </center>          
-
+    <!-- BARRA DE NAVEGACION SUPERIOR -->
+    <nav class="navbar navbar-expand-lg bg-dark">
+  <div class="container-fluid">
+          <a href="../sections/index.php" id="main-icon" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none fs-4">
+                 <img src="../img/Saman.png" alt="" width="30" height="24" class="d-inline-block align-text-top">FastFile
+         </a>    
+  
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Producto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Inventario</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Ventas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Clientes</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> 
+   
+<!-- CUERPO/ BODY DE LA APP-->
+<div class="container-fluid principal">
+    <div class="row">
+        <div class="col-12 col-sm-5 col-md-4 col-xl-4 text-white bg-dark" id="sidebar">
+         <!-- MENU DE ACORDION-->
+                
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Accordion Item #1
+                </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                 </div>
-                <div class="col-12 col-md-8 col-xl-8 text-white bg-dark">
-                    
-                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-                        <li>
-                            <a href="../sections/inventario.php" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"/></svg>
-                                Inventario
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../sections/producto.php" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"/></svg>
-                                Productos
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../sections/factura.php" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"/></svg>
-                                Ventas
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../sections/asociados.php" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
-                                Clientes
-                            </a>
-                        </li>
-                    </ul>
-
                 </div>
-             
             </div>
-        </div>
-
-        <div class="container-fluid">
-            <div class="row" id="pagina inicial">
-                <div class="col-12 col-md-6 col-lg-3 col-xl-4 text-light bg-dark" id="left-col">col-12 col-md-6 col-lg-3 col-xl-4</div>
-                <div class="col-12 col-md-6 col-lg-9 col-xl-8 text- bg-secondary" id="right-col">col-12 col-md-6 col-lg-9 col-xl-8</div>
-                <div class="col-10 col-md-4 col-lg-1 col-xl-2 text-light bg-dark" id="left-col">col-12 col-md-6 col-lg-3 col-xl-4</div>
-                <div class="col-10 col-md-4 col-lg-7 col-xl-6 text- bg-secondary" id="right-col">col-12 col-md-6 col-lg-9 col-xl-8</div>
-        
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Accordion Item #2
+                </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+                </div>
             </div>
-            
-        </div>
-
-        <div class="row justify-content-start">
-            
-            <div class="col-3 bg-primary">casilla</div>
-            <div class="col-3 bg-secondary">casilla</div>
-            <div class="col-3 bg-info">casilla</div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-3 bg-primary">casilla</div>
-            <div class="col-3 bg-secondary">casilla</div>
-            <div class="col-3 bg-info">casilla</div>
-        </div>
-        <div class="row justify-content-end">
-            <div class="col-3 bg-primary">casilla</div>
-            <div class="col-3 bg-secondary">casilla</div>
-            <div class="col-3 bg-info">casilla</div>
-        </div>
-        <div class="row justify-content-between">
-            <div class="col-3 bg-primary">casilla</div>
-            <div class="col-3 bg-secondary">casilla</div>
-            <div class="col-3 bg-info">casilla</div>
-        </div>
-        <div class="row justify-content-arround">
-            <div class="col-3 bg-primary">casilla</div>
-            <div class="col-3 bg-secondary">casilla</div>
-            <div class="col-3 bg-info">casilla</div>
-        </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Accordion Item #3
+                </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+                </div>
+            </div>
+            </div> 
         
-        <i class="fa-regular fa-address-book fa-xs"></i>
+    </div>
+        <div class="col-12 col-sm-7 col-md-8 col-xl-8 bg-secondary" id="contenido">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quod delectus. Ex eaque ab iure saepe impedit quam distinctio aliquam, quidem consequatur, temporibus ratione, laboriosam doloremque ut error odio porro.
+        Nemo corporis iure, voluptate officiis nam id inventore accusamus nisi debitis consequuntur animi modi harum! Praesentium saepe doloremque, reiciendis corporis debitis veniam tempore magnam perferendis totam porro neque quasi accusamus!
+        Maiores dignissimos reprehenderit sapiente et minus modi, impedit sit iure voluptates voluptas unde consequuntur eveniet adipisci. Harum animi ipsum exercitationem incidunt. Vero placeat non similique, nihil nesciunt perferendis eum officia.
+        Consectetur earum nobis impedit voluptate. Alias enim voluptatum pariatur. Perspiciatis aut libero temporibus doloribus nulla, reiciendis facilis ipsum repellendus culpa quisquam, fugit vel? Doloremque, assumenda temporibus a aspernatur delectus ad.</div>
+    </div>
+</div>
 
-        <div class="row">
-            <div class="col-1 text-primary bg-dark bg-gradient">1</div>
-            <div class="col-1 text-primary bg-dark bg-gradient">2</div>
-            <div class="col-1 text-primary bg-dark bg-gradient">3</div>
-            <div class="col-1 text-primary bg-dark bg-gradient">4</div>
-            <div class="col-1 text-primary bg-dark bg-gradient">5</div>
-            <div class="col-1 text-primary bg-dark bg-gradient">6</div>
-            <div class="col-1 text-primary bg-dark bg-gradient">7</div>
-            <div class="col-1 text-primary bg-dark bg-gradient">8</div>
-            <div class="col-1 text-primary bg-dark bg-gradient">9</div>
-            <div class="col-1 text-primary bg-dark bg-gradient">10</div>
-            <div class="col-1 text-primary bg-dark bg-gradient">11</div>
-            <div class="col-1 text-primary bg-dark bg-gradient">12</div>
-        </div>
-        
-        <style>
-            .caja {
-            background-color: black;
-            height: 200px;
-            width: 200px;
-        }
-        </style>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5">   
-          <div class="text-white bg-secondary">1</div>
-          <div class="text-white bg-secondary">2</div>
-          <div class="text-white bg-secondary">3</div>
-          <div class="text-white bg-secondary">4</div>
-          <div class="text-white bg-secondary">5</div>
-          <div class="text-white bg-secondary">6</div>
-          <div class="text-white bg-secondary">7</div>
-          <div class="text-white bg-secondary">8</div>
-        </div>
         
 
     <!-- Bootstrap JavaScript Libraries -->
