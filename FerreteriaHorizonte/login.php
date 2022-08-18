@@ -1,5 +1,4 @@
-<!--  ARCHIVO CON FUNCION DE CONEXCION A BASE DE DATOS -->  
-<?php require "db/database.php"?>
+
 
 <!doctype html>
 <html lang="es">
@@ -12,9 +11,12 @@
     <!-- Bootstrap CSS v5.2.0-beta1 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style_login.css">
+    
+
   </head>
   <body>
-      <div class="container-fluid">
+
+  <div class="container-fluid">
         <div class="row">
               <div class="col-12 col-sm-2 col-md-3 col-lg-4 col-xl-4"></div>
               

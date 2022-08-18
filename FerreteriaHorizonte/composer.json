@@ -1,0 +1,17 @@
+{
+    "name": "leodev/ferreteria-horizonte",
+    "description": "app web de inventarios",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Leodev\\FerreteriaHorizonte\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "leodev218",
+            "email": "leonardo.dev218@gmail.com"
+        }
+    ],
+    "require": {}
+}

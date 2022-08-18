@@ -1,10 +1,13 @@
 <!-- CABECERA/ HEADER DE LA APP-->
+<?php require '../src/entities/class-producto.php'; ?>
+<?php require '../config/database.php';?>
+
 <?php include ("../templates/header.php")?>
 
 <!-- CUERPO/ BODY DE LA APP-->
 <div class="container-fluid principal">
     <div class="row">
-        <div class="col-12 col-sm-5 col-md-4 col-xl-4 text-white bg-dark" id="sidebar">
+        <div class="col-12 col-sm-5 col-md-4 col-xl-4" id="sidebar">
          <!-- MENU DE ACORDION-->
                 
           <div class="accordion" id="accordionExample">
@@ -47,10 +50,57 @@
             </div> 
         
     </div>
-        <div class="col-12 col-sm-7 col-md-8 col-xl-8 bg-secondary" id="contenido">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quod delectus. Ex eaque ab iure saepe impedit quam distinctio aliquam, quidem consequatur, temporibus ratione, laboriosam doloremque ut error odio porro.
-        Nemo corporis iure, voluptate officiis nam id inventore accusamus nisi debitis consequuntur animi modi harum! Praesentium saepe doloremque, reiciendis corporis debitis veniam tempore magnam perferendis totam porro neque quasi accusamus!
-        Maiores dignissimos reprehenderit sapiente et minus modi, impedit sit iure voluptates voluptas unde consequuntur eveniet adipisci. Harum animi ipsum exercitationem incidunt. Vero placeat non similique, nihil nesciunt perferendis eum officia.
-        Consectetur earum nobis impedit voluptate. Alias enim voluptatum pariatur. Perspiciatis aut libero temporibus doloribus nulla, reiciendis facilis ipsum repellendus culpa quisquam, fugit vel? Doloremque, assumenda temporibus a aspernatur delectus ad.</div>
+        <div class="col-12 col-sm-7 col-md-8 col-xl-8 bg-white" id="contenido">
+
+
+
+<!-- TABLA PARA IMPRIMIR PRODUCTOS -->
+     
+<table class="table  table-hover m-4 table-striped">
+                <tr>
+                   <td class="col"><strong> Id producto</strong> </td>
+                   <td class="col"><strong> Nombre producto</strong> </td>
+                   <td class="col"><strong> Descripcion producto</strong> </td>
+                   <td class="col"><strong> Valor producto</strong> </td>
+                   <td class="col"><strong> Cantidad producto</strong> </td>
+                   <td class="col"><strong> Creado por</strong> </td>
+                </tr>
+<?php 
+$db = new Database();
+// ASIGNAMOS A $con LOS VALORES DE LA CLASE Y LA FUNCION DE CONEXION A LA BD YA CREADAS
+$con = $db->conectar();
+// DEFINIMOS UNA VARIABLE PARA GUARDAR LA CONSULTA SQL
+$sql = $con->prepare("SELECT * FROM producto");
+// EJECUTAMOS LA CONSULTA DE LA VARIABLE $sql
+$sql->execute();
+// GUARDAMOS EL RESULTADO EN UNA NUEVA VARIABLE Y DEFINIMOS EL BUCLE CON 'foreach'
+$resultado = $sql->fetchAll(PDO::FETCH_ASSOC); foreach ($resultado as $row) {
+
+?>
+                <tr>
+                  <td class="col"><?php echo $row ['id_poducto']; ?></td>
+                  <td class="col"><?php echo $row ['nombre_producto']; ?></td>
+                  <td class="col"><?php echo $row ['descripcion_producto']; ?></td>
+                  <td class="col"><?php echo $row ['valor_producto']; ?></td>
+                  <td class="col"><?php echo $row ['cantidad_producto']; ?></td>
+                  <td class="col"><?php echo $row ['creado_por']; ?></td>
+                </tr>
+<?php  } ?>
+            </table>
+<?php 
+    $producto = new Producto("tornillo","mundial","punta de estrella",200,500);
+    echo  $producto ->get_name();
+    echo "<br>";
+    echo  $producto ->get_branch();
+    echo "<br>";
+    echo  $producto ->get_description();
+    echo "<br>";
+    echo  $producto ->get_price();
+    echo "<br>";
+    echo  $producto ->get_stock();
+    echo "<br>";
+?>
+        </div>
     </div>
 </div>
 <!-- PIE/ FOOTER DE LA APP-->

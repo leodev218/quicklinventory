@@ -15,11 +15,11 @@
     <!-- BARRA DE NAVEGACION SUPERIOR -->
     <nav class="navbar navbar-expand-lg bg-dark">
   <div class="container-fluid">
-          <a href="../sections/index.php" id="main-icon" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none fs-4">
+          <a href="../sections/index.php" id="main-icon" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none fs-4 me-4">
                  <img src="../img/Saman.png" alt="" width="30" height="24" class="d-inline-block align-text-top">FastFile
          </a>    
   
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" id="toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
