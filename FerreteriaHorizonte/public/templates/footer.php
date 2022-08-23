@@ -2,7 +2,10 @@
 
   </div>
 <footer class="bg-dark footer" style="height: 400px;">
-  <h3 class="p-4 text-white">Creado por: <a href="#" class="link-info">Leodev</a></h3> 
+  <div class="card text-center m-4 p-3 border-0 bg-dark">
+      <h3 class="p-4 text-white">Creado por: <a href="#" class="link-info">Leodev</a></h3>
+  </div>
+   
 </footer>
 
 

@@ -1,12 +1,13 @@
 <?php 
 
 
-class Producto {
-  public string $namep;
-  public string $branchproduct;
-  public string $descriptionp;
-  public int $priceproduct;
-  public int $stockproduct;
+class Producto
+{
+    public string $namep;
+    public string $branchproduct;
+    public string $descriptionp;
+    public int $priceproduct;
+    public int $stockproduct;
 
 
   public function __construct($namep, $branchproduct,
@@ -38,16 +39,5 @@ class Producto {
 }
 
 
-    $producto = new Producto("tornillo","mundial","punta de estrella",200,500);
-    echo  $producto ->get_name();
-    echo "<br>";
-    echo  $producto ->get_branch();
-    echo "<br>";
-    echo  $producto ->get_description();
-    echo "<br>";
-    echo  $producto ->get_price();
-    echo "<br>";
-    echo  $producto ->get_stock();
-    echo "<br>";
-
+  
 ?>

@@ -1,53 +1,17 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- CABECERA/ HEADER DE LA APP-->
+<?php require '../../src/entities/class-producto.php'; ?>
+<?php require '../../config/database.php';?>
 
-    <!-- Bootstrap CSS v5.2.0-beta1 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<?php include ("../templates/header.php")?>
 
-  </head>
-  <body>
-    <!-- BARRA DE NAVEGACION SUPERIOR -->
-    <nav class="navbar navbar-expand-lg bg-dark">
-  <div class="container-fluid">
-          <a href="../sections/index.php" id="main-icon" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none fs-4">
-                 <img src="../img/Saman.png" alt="" width="30" height="24" class="d-inline-block align-text-top">FastFile
-         </a>    
-  
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Producto</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Inventario</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Ventas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Clientes</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav> 
-   
 <!-- CUERPO/ BODY DE LA APP-->
 <div class="container-fluid principal">
     <div class="row">
-        <div class="col-12 col-sm-5 col-md-4 col-xl-4 text-white bg-dark" id="sidebar">
+        <div class="col-12 col-sm-5 col-md-4 col-xl-4" id="sidebar">
          <!-- MENU DE ACORDION-->
                 
           <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
+            <div class="accordion-item mt-4">
                 <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     Accordion Item #1
@@ -86,18 +50,46 @@
             </div> 
         
     </div>
-        <div class="col-12 col-sm-7 col-md-8 col-xl-8 bg-secondary" id="contenido">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quod delectus. Ex eaque ab iure saepe impedit quam distinctio aliquam, quidem consequatur, temporibus ratione, laboriosam doloremque ut error odio porro.
-        Nemo corporis iure, voluptate officiis nam id inventore accusamus nisi debitis consequuntur animi modi harum! Praesentium saepe doloremque, reiciendis corporis debitis veniam tempore magnam perferendis totam porro neque quasi accusamus!
-        Maiores dignissimos reprehenderit sapiente et minus modi, impedit sit iure voluptates voluptas unde consequuntur eveniet adipisci. Harum animi ipsum exercitationem incidunt. Vero placeat non similique, nihil nesciunt perferendis eum officia.
-        Consectetur earum nobis impedit voluptate. Alias enim voluptatum pariatur. Perspiciatis aut libero temporibus doloribus nulla, reiciendis facilis ipsum repellendus culpa quisquam, fugit vel? Doloremque, assumenda temporibus a aspernatur delectus ad.</div>
+        <div class="col-12 col-sm-7 col-md-8 col-xl-8 bg-white" id="contenido">
+
+
+
+<!-- TABLA PARA IMPRIMIR PRODUCTOS -->
+     
+<table class="table  table-hover m-4 table-striped">
+                <tr>
+                   <td class="col"><strong> Id producto</strong> </td>
+                   <td class="col"><strong> Nombre producto</strong> </td>
+                   <td class="col"><strong> Descripcion producto</strong> </td>
+                   <td class="col"><strong> Valor producto</strong> </td>
+                   <td class="col"><strong> Cantidad producto</strong> </td>
+                   <td class="col"><strong> Creado por</strong> </td>
+                </tr>
+<?php 
+$db = new Database();
+// ASIGNAMOS A $con LOS VALORES DE LA CLASE Y LA FUNCION DE CONEXION A LA BD YA CREADAS
+$con = $db->conectar();
+// DEFINIMOS UNA VARIABLE PARA GUARDAR LA CONSULTA SQL
+$sql = $con->prepare("SELECT * FROM producto");
+// EJECUTAMOS LA CONSULTA DE LA VARIABLE $sql
+$sql->execute();
+// GUARDAMOS EL RESULTADO EN UNA NUEVA VARIABLE Y DEFINIMOS EL BUCLE CON 'foreach'
+$resultado = $sql->fetchAll(PDO::FETCH_ASSOC); foreach ($resultado as $row) {
+
+?>
+                <tr>
+                  <td class="col"><?php echo $row ['id_poducto']; ?></td>
+                  <td class="col"><?php echo $row ['nombre_producto']; ?></td>
+                  <td class="col"><?php echo $row ['descripcion_producto']; ?></td>
+                  <td class="col"><?php echo $row ['valor_producto']; ?></td>
+                  <td class="col"><?php echo $row ['cantidad_producto']; ?></td>
+                  <td class="col"><?php echo $row ['creado_por']; ?></td>
+                </tr>
+<?php  } ?>
+            </table>
+
+        </div>
     </div>
 </div>
-
-        
-
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
-  </body>
-</html>
+<!-- PIE/ FOOTER DE LA APP-->
+<?php include ("../templates/footer.php")?>

@@ -1,0 +1,10 @@
+     FERRETERIA HORIZONTE 
+ 
+ Estructura de el proyecto:
+
+*config -> contiene la clase Database junto con la configuracion del servidor
+            usuario, contraseña y base de datos necesaria para realizar las operaciones 
+            requeridas en la base de datos.
+*public -> contiene las diversas carpetas que componen las vistas graficas del 
+            programa; forms, contiene los formularios del sistema, img, guarda todas 
+            las imagenes necesrias para el sistema

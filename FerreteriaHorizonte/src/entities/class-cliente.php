@@ -1,6 +1,9 @@
 <?php
-class Cliente
- {
+
+namespace App;
+
+class Cliente 
+{
     public string $documentc;
     public string $namec;  
     public string $surnamec;
@@ -27,8 +30,7 @@ class Cliente
     public function get_phonec() {
       return $this->phonec;
     }
-  
-  }
+}
   
 
 ?>

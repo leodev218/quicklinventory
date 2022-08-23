@@ -1,7 +1,8 @@
 
 <?php
 
-require 'vendor/autoload.php';
+require __DIR__ . '../../../vendor/autoload.php';
+
 
 $producto1 = new Producto ('taladro','dewalt','esto es un taladro',150000,30);
 echo  $producto1 ->get_name();
@@ -14,5 +15,6 @@ echo  $producto1 ->get_price();
 echo "<br>";
 echo  $producto1 ->get_stock();
 echo "<br>";
+
 
 ?>
