@@ -1,8 +1,5 @@
 <?php 
 
-require __DIR__ . '../../../vendor/autoload.php';
-use App\Cliente;
-
 
 // PRUEBAS DE ALGORITMOS PARA ENCRIPTACION DE DATOS CON PHP
 $passwdO = "qwerty";

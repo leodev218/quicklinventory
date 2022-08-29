@@ -1,7 +1,23 @@
 <!-- CABECERA/ HEADER DE LA APP-->
-<?php include ("../templates/header.php")?>
+<?php 
+include ("../templates/header.php");
+session_start();
+if(!isset($_SESSION['rol']))
+{
+    header('location: ../../index.php');
+} else 
+  {
+    if($_SESSION['rol'] = !1)
+    {
+        header('location: ../../index.php');
+    }   
+  }
+
+
+?>
 
 <!-- CUERPO/ BODY DE LA APP-->
+ADMINISTADOR
 <div class="container-fluid principal">
     <div class="row">
         <!-- BARRA LATERAL IZQUIERDA-->

@@ -1,4 +1,5 @@
-
+<?php include_once 'config/database.php';
+?>
 
 <!doctype html>
 <html lang="es">
@@ -19,9 +20,9 @@
   <div class="container-fluid">
         <div class="row">
               <div class="col-12 col-sm-2 col-md-3 col-lg-4 col-xl-4"></div>
-              
+            
               <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-4 bg-dark mt-4 rounded-2 shadow">
-                    <form action="public/sections/index.php" method="$_POST">
+                    <form action="prueba1.php" method="post">
                       <div class="row">
                         <div class="col-2"></div>
                         <div class="col-2"><img class="m-3" src="public/img/Saman.png" alt="" width="72" height="57"></div>
@@ -38,8 +39,11 @@
                       </div>
                       <button class="w-100 btn btn-lg btn-primary" type="submit">Confirmar</button>
                       <p class="mt-5 m-4 text-white">&copy; 2022</p>
+                    </form>
                 </div>
-              <div class="col-12 col-sm-2 col-md-3 col-lg-4 col-xl-4"></div>   
+              <div class="col-12 col-sm-2 col-md-3 col-lg-4 col-xl-4">
+                <?php print_r($_POST);?>
+              </div>   
             </div>
       </div>
           

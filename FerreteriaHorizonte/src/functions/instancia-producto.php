@@ -1,8 +1,14 @@
 
 <?php
+include '../entities/class-producto.php';
 
-require __DIR__ . '../../../vendor/autoload.php';
-
+class CrearProducto extends Producto
+{
+    public function set_nameproduct()
+    {  
+            return $this->namep;
+    } 
+}
 
 $producto1 = new Producto ('taladro','dewalt','esto es un taladro',150000,30);
 echo  $producto1 ->get_name();
