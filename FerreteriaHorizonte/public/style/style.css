@@ -1,5 +1,12 @@
 /*HEADER*/
-
+.background_img {
+   max-height: 100%;
+   max-width: 100%;
+}
+.cat {
+    height: 100px;
+    width: 200px;
+}
 
 /*BODY*/
 

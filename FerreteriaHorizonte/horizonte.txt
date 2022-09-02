@@ -1,10 +1,24 @@
      FERRETERIA HORIZONTE 
  
  Estructura de el proyecto:
+ archivo index.php contiene el formulario de logue de la aplicacion web
 
 *config -> contiene la clase Database junto con la configuracion del servidor
             usuario, contraseña y base de datos necesaria para realizar las operaciones 
             requeridas en la base de datos.
 *public -> contiene las diversas carpetas que componen las vistas graficas del 
-            programa; forms, contiene los formularios del sistema, img, guarda todas 
-            las imagenes necesrias para el sistema
+            programa; 
+            
+        -forms, contiene los formularios del sistema,
+        -img, guarda todas las imagenes necesrias para el sistema
+        -modal, contiene los recuadros de interaccion con el sistema
+        -rol, contiene las vistas de perfil de usuario
+        -sections, contiene las vistas de cada seccion del programa
+        -style, contiene los estilos css
+        -contiene las plantilla base del programa
+
+*src -> contiene archivos de codigo php con la logica interna
+        -entities, contiene las clases del programa
+        -functions, contiene las funciones secundarias de la aplicacion web
+
+

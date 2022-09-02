@@ -1,21 +1,32 @@
 <!-- CABECERA/ HEADER DE LA APP-->
 <?php 
       include ("../templates/header.php");
+      include ("../templates/menu.php");
       require '../../config/database.php';
+      include ('../modal/buscarProducto.php');
+      include ('../modal/eliminarProducto.php');
+      include ('../forms/formProducto.php');
       
       ?>
 
 <!-- CUERPO/ BODY DE LA APP-->
 <div class="container-fluid principal">
     <div class="row">
-        <div class="col-12 col-sm-5 col-md-4 col-xl-4" id="sidebar">
+        <div class="col-12 col-sm-2 col-md-2 col-xl-2" id="sidebar">
 
         <!-- MENU DE SECCION -->
 
           <div class="d-grid gap-2">
-            <button class="btn mt-4 btn-dark" type="button">Buscar producto</button>
-            <button class="btn btn-dark" type="button">Crear producto</button>
-            <button class="btn btn-dark" type="button">Eliminar producto</button>
+                        <!-- Button trigger modal -->
+            <button type="button" class="btn mt-4 btn-dark" data-bs-toggle="modal" data-bs-target="#buscarProducto">
+              Buscar producto
+            </button>
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#formProducto">
+              Crear producto
+            </button>
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#eliminarProducto">
+              Eliminar producto
+            </button>
           </div>
 
         
@@ -25,10 +36,10 @@
         <?php  include '../templates/acordion.php';?>
 
         </div>
-        <div class="col-12 col-sm-7 col-md-8 col-xl-8 bg-white" id="contenido">
+        <div class="col-12 col-sm-10 col-md-10 col-xl-10 bg-white" id="contenido">
 
 
-
+          
                 <!-- TABLA PARA IMPRIMIR PRODUCTOS -->
 
             <table class="table  table-hover m-4 table-striped">

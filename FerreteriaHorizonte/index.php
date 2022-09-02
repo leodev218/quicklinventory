@@ -22,7 +22,7 @@
               <div class="col-12 col-sm-2 col-md-3 col-lg-4 col-xl-4"></div>
             
               <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-4 bg-dark mt-4 rounded-2 shadow">
-                    <form action="prueba1.php" method="post">
+                    <form action="src/functions/login.php" method="post">
                       <div class="row">
                         <div class="col-2"></div>
                         <div class="col-2"><img class="m-3" src="public/img/Saman.png" alt="" width="72" height="57"></div>
@@ -30,11 +30,11 @@
                       </div>
                       <h4 class="m-4 fw-normal text-white">Ingrese sus datos por favor</h4>
                       <div class="form-floating">
-                        <input type="email" class="form-control mb-3" id="floatingInput" placeholder="name@example.com">
+                        <input type="email" class="form-control mb-3" name="correo" id="floatingInput" placeholder="name@example.com">
                         <label for="floatingInput">Correo electronico</label>
                       </div>
                       <div class="form-floating">
-                        <input type="password" class="form-control mb-3" id="floatingPassword" placeholder="Password">
+                        <input type="password" class="form-control mb-3" name="contraseña" id="floatingPassword" placeholder="Password">
                         <label for="floatingPassword">Contraseña</label>
                       </div>
                       <button class="w-100 btn btn-lg btn-primary" type="submit">Confirmar</button>
@@ -42,7 +42,7 @@
                     </form>
                 </div>
               <div class="col-12 col-sm-2 col-md-3 col-lg-4 col-xl-4">
-                <?php print_r($_POST);?>
+  
               </div>   
             </div>
       </div>
