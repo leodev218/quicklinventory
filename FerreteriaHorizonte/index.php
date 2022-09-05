@@ -37,7 +37,7 @@
                         <input type="password" class="form-control mb-3" name="contraseña" id="floatingPassword" placeholder="Password">
                         <label for="floatingPassword">Contraseña</label>
                       </div>
-                      <button class="w-100 btn btn-lg btn-primary" type="submit">Confirmar</button>
+                      <button class="w-100 btn btn-lg btn-info" type="submit">Confirmar</button>
                       <p class="mt-5 m-4 text-white">&copy; 2022</p>
                     </form>
                 </div>

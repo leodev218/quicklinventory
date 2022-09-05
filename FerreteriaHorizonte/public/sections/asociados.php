@@ -2,6 +2,10 @@
       include("../templates/menu.php");
       require '../../config/database.php';
       include ('../modal/buscarProducto.php');
+      include ('../forms/formProveedor.php');
+      include ('../forms/formCliente.php');
+      include ('../modal/buscarClientes.php');
+      include ('../modal/eliminarClientes.php');
 ?>
 
 <!-- CUERPO/ BODY DE LA APP-->
@@ -15,16 +19,16 @@
           <div class="d-grid gap-2">
 
              <!-- Button trigger modal -->
-             <button type="button" class="btn mt-4 btn-dark" data-bs-toggle="modal" data-bs-target="#modalProducto">
+             <button type="button" class="btn mt-4 btn-dark" data-bs-toggle="modal" data-bs-target="#buscarCliente">
              Consultar
             </button>
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalProducto">
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#formProveedor">
               Crear proveedor
             </button>
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalProducto">
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#formCliente">
               Crear cliente
             </button>
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalProducto">
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#eliminarCliente">
               Eliminar
             </button>
 
@@ -39,6 +43,15 @@
     </div>
         <div class="col-12 col-sm-10 col-md-10 col-xl-10 bg-white" id="contenido">
 
+        <div class="row">
+             <div class="col-12 col-lg-8">
+                <h3 class="mt-4 ms-4 fw-bold">ASOCIADOS</h3>  
+                <?php print_r($_POST);?>
+             </div>
+             <div class="col-12 col-lg-4">
+                <?php include ("../templates/pags.php");?>
+             </div>           
+          </div>
 
 
                 <!-- TABLA PARA IMPRIMIR PRODUCTOS -->

@@ -3,10 +3,11 @@
       include ("../templates/header.php");
       include ("../templates/menu.php");
       require '../../config/database.php';
+      include ('../forms/formProducto.php');
+
+      //MODAL DE BOOTSTRAP
       include ('../modal/buscarProducto.php');
       include ('../modal/eliminarProducto.php');
-      include ('../forms/formProducto.php');
-      
       ?>
 
 <!-- CUERPO/ BODY DE LA APP-->
@@ -38,11 +39,17 @@
         </div>
         <div class="col-12 col-sm-10 col-md-10 col-xl-10 bg-white" id="contenido">
 
-
-          
-                <!-- TABLA PARA IMPRIMIR PRODUCTOS -->
-
-            <table class="table  table-hover m-4 table-striped">
+          <div class="row">
+             <div class="col-12 col-lg-8">
+                <h3 class="mt-4 ms-4 fw-bold">PRODUCTOS</h3>  
+                <?php print_r($_POST);?>
+             </div>
+             <div class="col-12 col-lg-4">
+                <?php include ("../templates/pags.php");?>
+             </div>           
+          </div>
+          <!-- TABLA PARA IMPRIMIR PRODUCTOS -->
+            <table class="table  table-hover mt-2 table-striped">
                  <tr>
                    <td class="col"><strong> Id producto</strong> </td>
                    <td class="col"><strong> Nombre producto</strong> </td>
@@ -64,7 +71,7 @@
 
                 ?>
                     <tr>
-                      <td class="col"><?php echo $row ['id_poducto']; ?></td>
+                      <td class="col"><?php echo $row ['id_producto']; ?></td>
                       <td class="col"><?php echo $row ['nombre_producto']; ?></td>
                       <td class="col"><?php echo $row ['descripcion_producto']; ?></td>
                       <td class="col"><?php echo $row ['valor_producto']; ?></td>

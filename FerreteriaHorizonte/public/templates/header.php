@@ -41,7 +41,7 @@
   </div>
 </nav> 
 
- <div class="bg-white" style="height: 1000px;">
+ <div class="bg-white" style="height: 100%;">
 
 
           

@@ -4,6 +4,9 @@
       include ("../templates/header.php");
       include("../templates/menu.php");
       include ('../modal/buscarProducto.php');
+      include ('../forms/formFactura.php');
+      include ('../modal/buscarFactura.php');
+      include ('../modal/eliminaFactura.php');
       ?>
 
 <!-- CUERPO/ BODY DE LA APP-->
@@ -16,13 +19,13 @@
           <div class="d-grid gap-2">
 
                            <!-- Button trigger modal -->
-            <button type="button" class="btn mt-4 btn-dark" data-bs-toggle="modal" data-bs-target="#modalProducto">
+            <button type="button" class="btn mt-4 btn-dark" data-bs-toggle="modal" data-bs-target="#buscarFactura">
               Buscar factura
             </button>
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalProducto">
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#formFactura">
               Crear factura
             </button>
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalProducto">
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#eliminarFactura">
               Eliminar factura
             </button>
 
@@ -37,9 +40,15 @@
 
         </div>
         <div class="col-12 col-sm-10 col-md-10 col-xl-10 bg-white" id="contenido">
-
-
-
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <h3 class="mt-4 ms-4 fw-bold">VENTAS</h3>  
+                    <?php print_r($_POST);?>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <?php include ("../templates/pags.php");?>
+                </div>           
+              </div>
                 <!-- TABLA PARA IMPRIMIR PRODUCTOS -->
 
             <table class="table  table-hover m-4 table-striped">

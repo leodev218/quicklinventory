@@ -1,6 +1,7 @@
 <?php
 
-class Usuario {
+class Usuario 
+{
     public string $documentu;
     public string $nameu;  
     public string $surnameu;

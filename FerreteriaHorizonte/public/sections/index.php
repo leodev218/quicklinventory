@@ -7,20 +7,18 @@
 <!-- CUERPO/ BODY DE LA APP-->
 
 
-<div class="border m-0 card text-center p-3">
-   <br>
-   <div class="cat">
-   <img class="background_img" src="../img/Logo_Horizon.png" alt="">
-    
-   </div>
-    
- </div> 
 
 <div class="row">
-     <div class="card text-center">
-       
        <div class="card-body">
          <div class="row">
+          <div class="col-12 col-sm-2 col-md-3 col-lg-4"></div>
+          
+             <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+
+                  <img src="../img/Logo_Horizon.png" alt="">
+             </div>
+          <div class="col-12 col-sm-2 col-md-3 col-lg-4"></div>
+
             <div class="col m-4"> 
               <div class="border-info bg-opacity-25 card text-center m-4 p-3">
                   <h3>MISION</h3>
@@ -44,7 +42,6 @@
          </div> 
           <br>
      </div>
-   </div>
 </div>
 
 

@@ -10,8 +10,8 @@
                 <div class="accordion-body">
 
                      <div class="d-grid gap-2">
-                      <button class="btn btn-info text-white" type="button">Button</button>
-                      <button class="btn btn-info text-white" type="button">Button</button>
+                      <button class="btn btn-info text-white" type="button">Contacto</button>
+                      <button class="btn btn-info text-white" type="button">Exportar excel</button>
                     </div>
                 </div>
                 </div>

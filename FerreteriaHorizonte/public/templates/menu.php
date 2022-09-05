@@ -14,7 +14,7 @@
              <a class="nav-link mt-2 link-dark" href="#"><strong>Cerrar sesion</strong></a>
            </li>
            <li class="nav-item">
-            <a class="nav-link bg-info m-1 active" href="#">Perfil</a> 
+            <a class="nav-link bg-info m-1 active" href="../rol/admin.php">Perfil</a> 
            </li>
          </ul>
     </div>

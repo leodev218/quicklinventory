@@ -27,8 +27,6 @@ class Database
             exit;
         }
     }
-
-
 }
 
 // NUEVA INSTANCIA DE LA CLASE DATABASE

@@ -3,6 +3,9 @@
       include ("../templates/menu.php");
       require '../../config/database.php';
       include ('../modal/buscarProducto.php');
+      include ('../modal/buscarOrden.php');
+      include ('../modal/eliminarOrden.php');
+      include ('../forms/formOrden.php');
 
 ?>
 
@@ -16,13 +19,13 @@
 
           <div class="d-grid gap-2">
               <!-- Button trigger modal -->
-              <button type="button" class="btn mt-4 btn-dark" data-bs-toggle="modal" data-bs-target="#modalProducto">
+              <button type="button" class="btn mt-4 btn-dark" data-bs-toggle="modal" data-bs-target="#buscarOrden">
               Buscar orden
             </button>
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalProducto">
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#formOrden">
               Crear orden
             </button>
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalProducto">
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#eliminarOrden">
               Eliminar orden
             </button>
 
@@ -36,8 +39,15 @@
     </div>
         <div class="col-12 col-sm-10 col-md-10 col-xl-10 bg-white" id="contenido">
 
-
-
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <h3 class="mt-4 ms-4 fw-bold">INVENTARIOS</h3>  
+                    <?php print_r($_POST);?>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <?php include ("../templates/pags.php");?>
+                </div>    
+            </div>
                 <!-- TABLA PARA IMPRIMIR PRODUCTOS -->
 
             <table class="table  table-hover m-4 table-striped">
