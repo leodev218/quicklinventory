@@ -1,24 +1,28 @@
 <?php
 include_once("../../config/database.php");
+include_once("../entities/Usuario.php");
 
-$nombre = $_POST["nombre"];
-$cedula = $_POST["cedula"];
-$telefono = $_POST["telefono"];
-$email = $_POST["email"];
-$query = "INSERT INTO usuarios (nombre,cedula,telefono,email) VALUES ('$nombre', '$cedula', '$telefono', '$email')";
-mysqli_query($mysqli, $query);
+$newUser = new Usuario(
+    $userDocument=$_POST['documentoUsuaio'],
+    $userName=$_POST['nombreUsuario'],
+    $userSurname=$_POST['apellidoUsuario'],
+    $useremail=$_POST['correoUsuario'],
+    $userPhone=$_POST['telefonoUsuario'],
+    $userRol=$_POST['rolUsuario'],
+    $userPassword=$_POST['conrrfimarContraseña']
+);
 
-if(!mysqli_error($mysqli)){
+// NUEVA INSTANCIA DE LA CLASE DATABASE
+$db = new Database();
+// ASIGNAMOS A $con LOS VALORES DE LA CLASE Y LA FUNCION DE CONEXION A LA BD YA CREADAS
+$con = $db->conectar();
+// DEFINIMOS UNA VARIABLE PARA GUARDAR LA CONSULTA SQL
+$sql = $con->prepare("INSERT INTO usuario (documento_usuario,nombre_usuario,apellido_usuario,correo_usuario,telefono_usuario,rol,contraseña) VALUES ('$userDocument','$userName','$userSurname','$useremail','$userPhone','$userRol','$userPassword');");
 
-    echo '{
-        "success":true,
-        "message":"Usuario agregado correctamente - '.$nombre.'"  
-    }';
+// EJECUTAMOS LA CONSULTA DE LA VARIABLE $sql
+$sql->execute();
+print('<div class="alert alert-info" role="alert">
+A simple info alert—check it out!
+</div>');
+?>
 
-}else{
-
-    echo '{
-        "success":false,
-        "message":"Error: "'.mysqli_error($mysqli).'"  
-    }';
-}

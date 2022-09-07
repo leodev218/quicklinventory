@@ -8,9 +8,9 @@
       <div class="modal-body">
       <form action="../rol/admin.php" method="post">
                   Nombre usuario
-                <input class="form-control" type="text" name="nombeUsuario" aria-label="default input example"> 
+                <input class="form-control" type="text" name="nombreUsuario" aria-label="default input example"> 
                 Apellido usuario
-                <input class="form-control" type="text" name="apellidoUsuariorr" aria-label="default input example"> 
+                <input class="form-control" type="text" name="apellidoUsuario" aria-label="default input example"> 
                   Documento usuario
                 <input class="form-control" type="text" placeholder="ingrese su documento sin puntos ni comas, por favor" name="documentoUsuaio" aria-label="default input example"> 
                   Correo usuario

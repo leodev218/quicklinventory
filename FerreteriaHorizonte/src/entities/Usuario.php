@@ -6,15 +6,17 @@ class Usuario
     public string $nameu;  
     public string $surnameu;
     public string $emailu;
+    public string $phoneu;
     public int $rolu;
     public string $passwordu;
   
   
-    public function __construct($documentu,$nameu,$surnameu,$emailu,$rolu,$passwordu) {
+    public function __construct($documentu,$nameu,$surnameu,$emailu,$phoneu,$rolu,$passwordu) {
       $this->documentu = $documentu;
       $this->nameu = $nameu;
       $this->surnameu = $surnameu;
       $this->emailu = $emailu;
+      $this->phoneu = $phoneu;
       $this->rolu = $rolu;
       $this->passwordu = $passwordu;
     }
@@ -32,6 +34,9 @@ class Usuario
       return $this->emailu;
     }
   
+    public function get_phoneu() {
+      return $this->phoneu;
+    }
     public function get_rolu() {
       return $this->rolu;
     }

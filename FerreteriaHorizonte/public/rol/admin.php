@@ -2,7 +2,6 @@
 <?php 
     include ("../templates/header.php");
     require '../../config/database.php';
-
     include ('../forms/formUsuario.php');
     include ('../modal/eliminarUsuario.php');
     include ('../modal/buscarUsuario.php');
@@ -78,7 +77,9 @@ if(!isset($_SESSION['rol']))
       <!-- CONTENIDO PRINCIPAL -->      
         </div>
         <div class="col-12 col-sm-10 col-md-10 col-xl-10" id="contenido"> 
-           <!-- CARTA DE PERFIL -->
+          
+         
+        <!-- CARTA DE PERFIL -->
            <div class="card text-center mt-2">
              <div class="card-header fw-bold">
                  Bienvenido admin

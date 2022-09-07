@@ -1,4 +1,9 @@
 <?php
-include_once ('config/database.php');
 
-print_r($_POST);
+session_start();
+$userEmail = $_POST['correo'];
+$userPassword = $_POST['contraseña'];
+
+
+
+
