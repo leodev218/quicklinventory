@@ -9,7 +9,7 @@
         <form action="../sections/factura.php" method="post">
          <input class="form-control" type="text" placeholder="Nombre o documento de proveedor o cliente" aria-label="default input example"> 
          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="submit" class="btn btn-primary m-2">Buscar</button>
+        <button type="submit" name="seleccionar" class="btn btn-primary m-2">Buscar</button>
         </form>
       </div>
       <div class="modal-footer">

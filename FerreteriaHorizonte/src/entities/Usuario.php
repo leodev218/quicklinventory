@@ -2,7 +2,7 @@
 
 class Usuario 
 {
-    public string $documentu;
+    public string $userDocument;
     public string $nameu;  
     public string $surnameu;
     public string $emailu;
@@ -11,8 +11,8 @@ class Usuario
     public string $passwordu;
   
   
-    public function __construct($documentu,$nameu,$surnameu,$emailu,$phoneu,$rolu,$passwordu) {
-      $this->documentu = $documentu;
+    public function __construct($userDocument,$nameu,$surnameu,$emailu,$phoneu,$rolu,$passwordu) {
+      $this->userDocument = $userDocument;
       $this->nameu = $nameu;
       $this->surnameu = $surnameu;
       $this->emailu = $emailu;
@@ -20,8 +20,14 @@ class Usuario
       $this->rolu = $rolu;
       $this->passwordu = $passwordu;
     }
+    public function set_documentu(){
+      $this ->userDocument=$_POST['documentoUsuario'];
+    }
     public function get_documentu(){
-        return $this ->documentu;
+        return $this ->userDocument; 
+    }
+    public function set_nameu(){
+      $this ->userDocument=$_POST['documentoUsuario'];
     }
     public function get_nameu() {  
       return $this->nameu;

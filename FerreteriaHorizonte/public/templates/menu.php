@@ -11,7 +11,11 @@
          <ul class="nav nav-pills card-header-pills">
            
            <li class="nav-item">
-             <a class="nav-link mt-2 link-dark" href="#"><strong>Cerrar sesion</strong></a>
+            <form action="../../src/functions/controlUsuario.php" method="post">
+            <input type="hidden" name="cerrarSesion" value="Cerrar sesion">
+            <input class="btn m-1" type="submit" value="Cerrar sesion">  
+            </form>
+             
            </li>
            <li class="nav-item">
             <a class="nav-link bg-info m-1 active" href="../rol/admin.php">Perfil</a> 

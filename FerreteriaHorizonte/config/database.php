@@ -21,6 +21,7 @@ class Database
         
             $pdo = new PDO ($conexion,$this->username,$this->password,$option);
             return $pdo;
+           
 
         } catch (PDOException $e) {
             echo "Error de conexion: " .$e->getMessage();
@@ -29,16 +30,5 @@ class Database
     }
 }
 
-// NUEVA INSTANCIA DE LA CLASE DATABASE
-$db = new Database();
-// ASIGNAMOS A $con LOS VALORES DE LA CLASE Y LA FUNCION DE CONEXION A LA BD YA CREADAS
-$con = $db->conectar();
-// DEFINIMOS UNA VARIABLE PARA GUARDAR LA CONSULTA SQL
-$sql = $con->prepare("SELECT * FROM usuario");
-// EJECUTAMOS LA CONSULTA DE LA VARIABLE $sql
-$sql->execute();
-
-$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 
-?>
