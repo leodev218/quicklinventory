@@ -13,11 +13,17 @@
                 <input class="form-control" type="date" name="fechaPago" aria-label="default input example"> 
                   Numero orden
                 <input class="form-control" type="text" placeholder="ingrese su documento sin puntos ni comas, por favor" name="numeroOrden" aria-label="default input example"> 
-                  Documento
-                <input class="form-control" type="number" name="documento" aria-label="default input example"> 
+                 Tipo factura
+                 <div class="row">
+                  <input class="form-check-input ms-4" type="radio" name="tipoFactura" value="venta" aria-label="default input example"> 
+                    <label class="form-check-input border-0" for="html">Venta</label><br>
+                  <input class="form-check-input ms-4" type="radio" name="tipoFactura" value="compra" aria-label="default input example"> 
+                    <label class="form-check-input border-0" for="html">Compra</label><br>
+                  
+                 </div>
                 <input type="hidden" name="creadoPor" value="1">
-                <button type="button" class="btn btn-secondary ms-0 m-2" data-bs-dismiss="modal">Cerrar</button>
-                <button type="submit" class="btn btn-info m-2">Confirmar</button>
+                <button type="button" class="btn btn-secondary ms-0 mt-3" data-bs-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-info ms-2 mt-3">Confirmar</button>
             </form>
       </div>
       <div class="modal-footer">

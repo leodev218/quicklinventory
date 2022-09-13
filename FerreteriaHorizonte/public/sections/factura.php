@@ -57,8 +57,8 @@
                    <td class="col"><strong> Fecha entrega</strong> </td>
                    <td class="col"><strong> Fecha pago</strong> </td>
                    <td class="col"><strong> Numero orden</strong> </td>
-                   <td class="col"><strong> Documento cliente</strong> </td>
-                   <td class="col"><strong> Acciones</strong> </td>
+                   <td class="col"><strong> Compra</strong> </td>
+                   <td class="col"><strong> Venta</strong> </td>
                  </tr>
                 <?php 
                 $db = new Database();
