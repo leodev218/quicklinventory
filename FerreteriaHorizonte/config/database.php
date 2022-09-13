@@ -7,11 +7,13 @@ class Database
     private $username = "root";
     private $password = "";
     private $charset = "utf8";
+    
 
-    function conectar () 
+    public function conectar()
     {
         try 
         {
+            
             $conexion = "mysql:host=" .$this -> host . ";dbname=" .$this -> dbname.";charset=" .$this -> charset;
             
             $option = [
@@ -20,6 +22,8 @@ class Database
             ];
         
             $pdo = new PDO ($conexion,$this->username,$this->password,$option);
+            
+            $pdo->exec("set names utf8");
             return $pdo;
            
 
@@ -29,6 +33,5 @@ class Database
         }
     }
 }
-
 
 

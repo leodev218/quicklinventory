@@ -1,6 +1,9 @@
 <?php
+    //print_r($_POST);
 
-    session_start();
+
+
+      session_start();
     if(isset($_POST['cerrarSesion']))
     {
         session_unset();
@@ -8,9 +11,9 @@
     }
     if(isset($_SESSION['rol'])){
         switch($_SESSION['rol']){
-            case 1: header('location: public/rol/admin.php');
+            case 1: header("location: ../../public/rol/admin.php");
             break;
-            case 2: header('location: public/rol/admin.php');
+            case 2: header("location: ../../public/rol/employee.php");
             break;
             default;
         }
@@ -26,9 +29,14 @@
         $con = $db->conectar();
         // DEFINIMOS UNA VARIABLE PARA GUARDAR LA CONSULTA SQL
         $sql = $con->prepare("SELECT * FROM usuario WHERE correo_usuario = '$userEmail' AND contraseña = '$userPassword';");
+        return $sql;
+        print_r($sql);
         // EJECUTAMOS LA CONSULTA DE LA VARIABLE $sql
-        $sql->execute(['correo_usuario' => $userEmail,'contraseña' => $userPassword]);
-        $resultado = $sql->fetchAll(PDO::FETCH_NUM); 
+        //$sql->execute(['correo_usuario' => $userEmail,'contraseña' => $userPassword]);
+        //$resultado = $sql->fetchAll(PDO::FETCH_NUM); 
+        
+    }
+        /*
         if($resultado == true)
         {
             $rol = $resultado[6];
@@ -45,7 +53,7 @@
             echo "El usuario o contraseña es incorrecto";
         }
     }
-
+*/
 
 
 

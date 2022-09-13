@@ -27,7 +27,7 @@
 
         
                 <button type="button" class="btn btn-secondary ms-0 m-2" data-bs-dismiss="modal">Cerrar</button>
-                <button type="submit" name="insertar" class="btn btn-info m-2">Confirmar</button>
+                <button type="submit" name="btnAccion" value="insertar" class="btn btn-info m-2">Confirmar</button>
             </form>
       </div>
       <div class="modal-footer">

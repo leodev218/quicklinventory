@@ -92,7 +92,7 @@ if(!isset($_SESSION['rol']))
                       <div class="row">
              <div class="col-12 col-lg-8">
                 <h3 class="mt-4 ms-4 fw-bold">USUARIOS</h3>  
-                <?php print_r($_POST);?>
+               
              </div>
              <div class="col-12 col-lg-4">
                 <?php include ("../templates/pags.php");?>
@@ -109,6 +109,7 @@ if(!isset($_SESSION['rol']))
                    <td class="col"><strong> Correo usuario</strong> </td>
                    <td class="col"><strong> Telefono usuario</strong> </td>
                    <td class="col"><strong> Rol</strong> </td>
+                   <td class="col"><strong> Acciones</strong></td>
                  </tr>
                 <?php 
                 $db = new Database();
@@ -130,6 +131,12 @@ if(!isset($_SESSION['rol']))
                       <td class="col"><?php echo $row ['correo_usuario']; ?></td>
                       <td class="col"><?php echo $row ['telefono_usuario']; ?></td>
                       <td class="col"><?php echo $row ['rol']; ?></td>
+                      <td>
+                        <div class="btn-group">
+                          <button class="btn btn-info text-white" name="">editar</button>
+                          <button class="btn btn-dark">eliminar</button>
+                        </div>
+                      </td>
                     </tr>
                 <?php  } ?>
              </table> 

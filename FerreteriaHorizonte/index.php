@@ -1,59 +1,6 @@
 <?php 
 include_once 'config/database.php';
-include_once 'src/functions/login.php';
-
-
-
-session_start();
-if(isset($_POST['cerrarSesion']))
-{
-    session_unset();
-    session_destroy();
-}
-if(isset($_SESSION['rol'])){
-    switch($_SESSION['rol']){
-        case 1: header('location: public/rol/admin.php');
-        break;
-        case 2: header('location: public/rol/admin.php');
-        break;
-        default;
-    }
-}
-if (isset($_POST['correo_usuario']) && isset($_POST['contraseña']))
-{
-    $userEmail = $_POST['correo'];
-    $userPassword = $_POST['contraseña'];
-    
-    // NUEVA INSTANCIA DE LA CLASE DATABASE
-    $db = new Database();
-    // ASIGNAMOS A $con LOS VALORES DE LA CLASE Y LA FUNCION DE CONEXION A LA BD YA CREADAS
-    $con = $db->conectar();
-    // DEFINIMOS UNA VARIABLE PARA GUARDAR LA CONSULTA SQL
-    $sql = $con->prepare("SELECT * FROM usuario WHERE correo_usuario = '$userEmail' AND contraseña = '$userPassword';");
-    // EJECUTAMOS LA CONSULTA DE LA VARIABLE $sql
-    $sql->execute(['correo_usuario' => $userEmail,'contraseña' => $userPassword]);
-    $resultado = $sql->fetchAll(PDO::FETCH_NUM); 
-    if($resultado == true)
-    {
-        $rol = $resultado[6];
-        $_SESSION['rol'] = $rol;
-
-        switch($_SESSION['rol']){
-            case 1: header('location: ../../public/rol/admin.php');
-            break;
-            case 2: header('location: public/rol/admin.php');
-            break;
-            default;
-        }
-    }else{
-        echo "El usuario o contraseña es incorrecto";
-    }
-}
-
-
-
-
-
+//include_once 'src/functions/login.php';
 ?>
 
 <!doctype html>
@@ -74,10 +21,10 @@ if (isset($_POST['correo_usuario']) && isset($_POST['contraseña']))
 
   <div class="container-fluid">
         <div class="row">
-              <div class="col-12 col-sm-2 col-md-3 col-lg-4 col-xl-4"></div>
-            
-              <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-4 bg-dark mt-4 rounded-2 shadow">
-                    <form action="index.php" method="post">
+           <div class="col-12 col-sm-2 col-md-3 col-lg-4 col-xl-4"></div>
+         
+              <div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-4 bg-dark bg-gradient mt-4 rounded-2 shadow">
+                    <form action="src/functions/login.php" method="post">
                       <div class="row">
                         <div class="col-2"></div>
                         <div class="col-2"><img class="m-3" src="public/img/Saman.png" alt="" width="72" height="57"></div>
@@ -92,12 +39,11 @@ if (isset($_POST['correo_usuario']) && isset($_POST['contraseña']))
                         <input type="password" class="form-control mb-3" name="contraseña" id="floatingPassword" placeholder="Password">
                         <label for="floatingPassword">Contraseña</label>
                       </div>
-                      <button class="w-100 btn btn-lg btn-info" type="submit">Confirmar</button>
+                      <button class="w-100 btn btn-lg btn-info text-white" type="submit" name="btnAccion" value="login">Confirmar</button>
                       <p class="mt-5 m-4 text-white">&copy; 2022</p>
                     </form>
                 </div>
               <div class="col-12 col-sm-2 col-md-3 col-lg-4 col-xl-4">
-  
               </div>   
             </div>
       </div>

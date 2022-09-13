@@ -20,15 +20,32 @@ class Usuario
       $this->rolu = $rolu;
       $this->passwordu = $passwordu;
     }
-    public function set_documentu(){
-      $this ->userDocument=$_POST['documentoUsuario'];
+    public function passwordHash(string $hash)
+    {
+      //USO DE  password_hash
+      $hash = password_hash($this->passwordu, PASSWORD_DEFAULT);
+      echo "contraseña encriptada con passwod_hash: ".$hash;
+      echo "</br>";
+      echo "</br>";
+ 
+  
+  /**  EL USO DE LA FUNCION PASSWORD VERIFY EN PHP
+   *  esta funcion de PHP permite la vaildacion
+   *  de los datos encriptados
+   */
+    if (password_verify($this->passwordu, $hash))
+    {
+      echo "password conrrecta";
     }
+    echo "</br>";
+    echo strlen($hash);
+    echo "</br>";
+    }
+   
     public function get_documentu(){
         return $this ->userDocument; 
     }
-    public function set_nameu(){
-      $this ->userDocument=$_POST['documentoUsuario'];
-    }
+  
     public function get_nameu() {  
       return $this->nameu;
     }
