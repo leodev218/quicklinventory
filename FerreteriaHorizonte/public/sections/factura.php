@@ -43,7 +43,7 @@
             <div class="row">
                 <div class="col-12 col-lg-8">
                     <h3 class="mt-4 ms-4 fw-bold">VENTAS</h3>  
-                    <?php print_r($_POST);?>
+                    
                 </div>
                 <div class="col-12 col-lg-4">
                     <?php include ("../templates/pags.php");?>
@@ -58,7 +58,7 @@
                    <td class="col"><strong> Fecha pago</strong> </td>
                    <td class="col"><strong> Numero orden</strong> </td>
                    <td class="col"><strong> Documento cliente</strong> </td>
-                   <td class="col"><strong> Creado por</strong> </td>
+                   <td class="col"><strong> Acciones</strong> </td>
                  </tr>
                 <?php 
                 $db = new Database();

@@ -12,8 +12,8 @@
            
            <li class="nav-item">
             <form action="../../src/functions/login.php" method="post">
-            <input type="hidden" name="cerrarSesion" value="cerrarSesion">
-            <input class="btn m-1" type="submit" value="cerrarSesion">  
+              <input type="hidden" name="cerrarSesion" value="cerrarSesion">
+              <input class="btn m-1" type="submit" value="Cerrar sesion">  
             </form>
              
            </li>

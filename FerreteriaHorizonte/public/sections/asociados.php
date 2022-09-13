@@ -46,7 +46,7 @@
         <div class="row">
              <div class="col-12 col-lg-8">
                 <h3 class="mt-4 ms-4 fw-bold">ASOCIADOS</h3>  
-                <?php print_r($_POST);?>
+               
              </div>
              <div class="col-12 col-lg-4">
                 <?php include ("../templates/pags.php");?>
@@ -54,22 +54,23 @@
           </div>
 
 
-                <!-- TABLA PARA IMPRIMIR PRODUCTOS -->
-
+                <!-- TABLA PARA IMPRIMIR PROVEEDORES -->
+                <h5 class="mt-4 ms-4 fw-bold">PROVEEDOR</h5>
             <table class="table  table-hover m-4 table-striped">
                  <tr>
-                   <td class="col"><strong> Id orden</strong> </td>
-                   <td class="col"><strong> Fecha creacion</strong> </td>
-                   <td class="col"><strong> Fecha entrega</strong> </td>
-                   <td class="col"><strong> Fecha pago</strong> </td>
-                   <td class="col"><strong> Creada por</strong> </td>
+                   <td class="col"><strong> Id proveedor</strong> </td>
+                   <td class="col"><strong> Documento proveedor</strong> </td>
+                   <td class="col"><strong> Nombre proveedor</strong> </td>
+                   <td class="col"><strong> Apellido proveedor</strong> </td>
+                   <td class="col"><strong> Apellido proveedor</strong> </td>
+                   <td class="col"><strong> Creado por</strong> </td>
                  </tr>
                 <?php 
                 $db = new Database();
                 // ASIGNAMOS A $con LOS VALORES DE LA CLASE Y LA FUNCION DE CONEXION A LA BD YA CREADAS
                 $con = $db->conectar();
                 // DEFINIMOS UNA VARIABLE PARA GUARDAR LA CONSULTA SQL
-                $sql = $con->prepare("SELECT * FROM orden");
+                $sql = $con->prepare("SELECT * FROM proveedor");
                 // EJECUTAMOS LA CONSULTA DE LA VARIABLE $sql
                 $sql->execute();
                 // GUARDAMOS EL RESULTADO EN UNA NUEVA VARIABLE Y DEFINIMOS EL BUCLE CON 'foreach'
@@ -77,10 +78,46 @@
 
                 ?>
                     <tr>
-                      <td class="col"><?php echo $row ['id_orden']; ?></td>
-                      <td class="col"><?php echo $row ['fecha_creacion']; ?></td>
-                      <td class="col"><?php echo $row ['fecha_entrega']; ?></td>
-                      <td class="col"><?php echo $row ['fecha_pago']; ?></td>
+                      <td class="col"><?php echo $row ['id_proveedor']; ?></td>
+                      <td class="col"><?php echo $row ['documento_proveedor']; ?></td>
+                      <td class="col"><?php echo $row ['nombre_proveedor']; ?></td>
+                      <td class="col"><?php echo $row ['apellido_proveedor']; ?></td>
+                      <td class="col"><?php echo $row ['telefono_proveedor']; ?></td>
+                      <td class="col"><?php echo $row ['creado_por']; ?></td>
+                    </tr>
+                <?php  } ?>
+             </table>
+
+             
+             <!-- TABLA PARA IMPRIMIR CLIENTE -->
+             <h5 class="mt-4 ms-4 fw-bold">CLIENTE</h5>
+             <table class="table  table-hover m-4 table-striped">
+                 <tr>
+                 <td class="col"><strong> Id cliente</strong> </td>
+                   <td class="col"><strong> Documento cliente</strong> </td>
+                   <td class="col"><strong> Nombre cliente</strong> </td>
+                   <td class="col"><strong> Apellido cliente</strong> </td>
+                   <td class="col"><strong> Apellido cliente</strong> </td>
+                   <td class="col"><strong> Creado por</strong> </td>
+                 </tr>
+                <?php 
+                $db = new Database();
+                // ASIGNAMOS A $con LOS VALORES DE LA CLASE Y LA FUNCION DE CONEXION A LA BD YA CREADAS
+                $con = $db->conectar();
+                // DEFINIMOS UNA VARIABLE PARA GUARDAR LA CONSULTA SQL
+                $sql = $con->prepare("SELECT * FROM cliente");
+                // EJECUTAMOS LA CONSULTA DE LA VARIABLE $sql
+                $sql->execute();
+                // GUARDAMOS EL RESULTADO EN UNA NUEVA VARIABLE Y DEFINIMOS EL BUCLE CON 'foreach'
+                $resultado = $sql->fetchAll(PDO::FETCH_ASSOC); foreach ($resultado as $row) {
+
+                ?>
+                    <tr>
+                      <td class="col"><?php echo $row ['id_cliente']; ?></td>
+                      <td class="col"><?php echo $row ['documento_cliente']; ?></td>
+                      <td class="col"><?php echo $row ['nombre_cliente']; ?></td>
+                      <td class="col"><?php echo $row ['apellido_cliente']; ?></td>
+                      <td class="col"><?php echo $row ['telefono_cliente']; ?></td>
                       <td class="col"><?php echo $row ['creado_por']; ?></td>
                     </tr>
                 <?php  } ?>

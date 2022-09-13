@@ -43,7 +43,7 @@ echo "</br>";
     echo "</br>";
   /**
    * LISTA DE ALGORITMOS DISPONIBLES PARA ENCRIPTAR INFORMACION EN PHP
-   *   !nos recomendados por no variar su contenido,
+   *   !no recomendados por no variar su contenido,
    *    haciendolos un poco mas vulnerables¡
    */
   

@@ -42,7 +42,7 @@
           <div class="row">
              <div class="col-12 col-lg-8">
                 <h3 class="mt-4 ms-4 fw-bold">PRODUCTOS</h3>  
-                <?php print_r($_POST);?>
+                
              </div>
              <div class="col-12 col-lg-4">
                 <?php include ("../templates/pags.php");?>

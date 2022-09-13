@@ -6,7 +6,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <form action="../sections/factura.php" method="post">
+      <form action="../../src/functions/controlFactura.php" method="post">
                   Fecha entrega
                 <input class="form-control" type="date" name="fechaEntega" aria-label="default input example"> 
                   Fecha pago
@@ -15,7 +15,7 @@
                 <input class="form-control" type="text" placeholder="ingrese su documento sin puntos ni comas, por favor" name="numeroOrden" aria-label="default input example"> 
                   Documento
                 <input class="form-control" type="number" name="documento" aria-label="default input example"> 
-                 
+                <input type="hidden" name="creadoPor" value="1">
                 <button type="button" class="btn btn-secondary ms-0 m-2" data-bs-dismiss="modal">Cerrar</button>
                 <button type="submit" class="btn btn-info m-2">Confirmar</button>
             </form>
