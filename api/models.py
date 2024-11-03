@@ -23,17 +23,15 @@ class Status(models.Model):
         return self.name
 
 
-class Employee(models.Model):
+class Supplier(models.Model):
 
-    name = models.TextField()
+    name = models.CharField(max_length=255)
+
+    contact_name = models.CharField(max_length=255, blank=True, null=True)
 
     email = models.EmailField(unique=True)
 
-    phone = models.TextField(null=True, blank=True)
-
-    role = models.ForeignKey(Role, on_delete=models.SET_NULL, null=True)
-
-    status = models.ForeignKey(Status, on_delete=models.SET_NULL, null=True)
+    phone = models.CharField(max_length=20, blank=True, null=True)
 
 
     def __str__(self):
@@ -43,7 +41,7 @@ class Employee(models.Model):
 
 class Category(models.Model):
 
-    name = models.TextField(unique=True)
+    name = models.CharField(max_length=255, unique=True)
 
 
     def __str__(self):
@@ -53,11 +51,15 @@ class Category(models.Model):
 
 class Product(models.Model):
 
-    name = models.TextField()
+    name = models.CharField(max_length=255)
 
     price = models.DecimalField(max_digits=10, decimal_places=2)
 
-    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
+    stock = models.IntegerField(default=0)
+
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+
+    supplier = models.ForeignKey(Supplier, on_delete=models.CASCADE, null=True, blank=True)
 
 
     def __str__(self):
