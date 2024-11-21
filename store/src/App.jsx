@@ -2,9 +2,20 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import axios from "axios"
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const getEmployees = async () => {
+    try {
+      const url = "http://127.0.0.1:8000/api/v1/employees/";
+      const response = await axios.get(url);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <>
@@ -21,6 +32,7 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        <button onClick={getEmployees}>Get elements</button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
