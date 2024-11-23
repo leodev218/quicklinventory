@@ -2,7 +2,7 @@ from django.urls import path, include
 from rest_framework.documentation import include_docs_urls
 from rest_framework.routers import DefaultRouter
 
-from .views import RoleViewSet, EmployeeViewSet, StatusViewSet, SupplierViewSet, CustomerViewSet, CategoryViewSet, ProductViewSet, OrderViewSet,OrderItemViewSet, InvoiceViewSet
+from .views import RoleViewSet, EmployeeViewSet, StatusViewSet, SupplierViewSet, CustomerViewSet, CategoryViewSet, ProductViewSet, OrderViewSet,OrderItemViewSet, InvoiceViewSet, EmployeeRoleView
 
 # Crea un router y registra nuestros viewsets con él
 
@@ -34,6 +34,7 @@ router.register(r'order-items', OrderItemViewSet)
 urlpatterns = [
 
     path('v1/', include(router.urls)),
+    path('v1.1/employees/roles/', EmployeeRoleView.as_view()),
     path('docs/', include_docs_urls(title="Invetory Api"))
 
 ]

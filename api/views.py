@@ -1,4 +1,7 @@
 from rest_framework import viewsets
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.views import APIView
 from .models import Role, Employee, Status, Supplier, Customer, Category, Product, Order, OrderItem, Invoice
 from .serializers import RoleSerializer, EmployeeSerializer, StatusSerializer, SupplierSerializer, CustomerSerializer, CategorySerializer, ProductSerializer, OrderSerializer, OrderItemSerializer, InvoiceSerializer
 
@@ -41,3 +44,8 @@ class OrderItemViewSet(viewsets.ModelViewSet):
 class InvoiceViewSet(viewsets.ModelViewSet):
     queryset = Invoice.objects.all()
     serializer_class = InvoiceSerializer
+    
+class EmployeeRoleView(APIView):
+    def get(self, request):
+        employees = Employee.objects.select_related('role').values('id', 'name', 'role__name', 'email', 'phone')
+        return Response(employees)
