@@ -48,5 +48,5 @@ class InvoiceViewSet(viewsets.ModelViewSet):
 #Vista personalizada    
 class EmployeeRoleView(APIView):
     def get(self, request):
-        employees = Employee.objects.select_related('role').values('id', 'name', 'role__name', 'email', 'phone')
+        employees = Employee.objects.select_related('role').values('id', 'name', 'role__name', 'role__salary','email', 'phone')
         return Response(employees)

@@ -26,6 +26,7 @@ function ViewEmployeeTable () {
                     <th>Id</th>
                     <th>Nombre</th>
                     <th>Cargo</th>
+                    <th>Salario</th>
                     <th>Correo</th>
                     <th>Telefono</th>
                 </tr>
@@ -36,6 +37,7 @@ function ViewEmployeeTable () {
                     <td>{view.id}</td>
                     <td>{view.name}</td>
                     <td>{view.role__name}</td>
+                    <td>{view.role__salary}</td>
                     <td>{view.email}</td>
                     <td>{view.phone}</td>
                 </tr>
