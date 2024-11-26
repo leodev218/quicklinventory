@@ -1,4 +1,4 @@
-import Datos from "../components/Datos"
+import ViewEmployeeTable from "../components/ViewEmployeeTable"
 import Menu from "../layouts/Menu"
 
 function Perfil () {
@@ -7,7 +7,8 @@ function Perfil () {
         <>
             <Menu/>
                 <h1>Perfil</h1>
-                <Datos/>
+                <h1>Lista empleados</h1>
+                <ViewEmployeeTable/>
         </>
         
     )

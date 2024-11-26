@@ -3,22 +3,20 @@ import { Container,Table } from "react-bootstrap"
 import viewEmployeeService from "../service/viewEmployeeService"
 
 function ViewEmployeeTable () {
-    const [viewEmployee, setViewEmployee]= useState([])
+    const [viewEmployee, setViewEmployee] = useState([]);
 
-    const cargarViewEmployee= async () =>{
-
-        try {
-            const response= await viewEmployeeService.getViewEmployee()
-            setViewEmployee(response.data)
-
-        } catch (error) {
-            console.log("Error al obtener la vista de empleados", error)
-        }
-    }
-
-    useEffect(()=>{
-        cargarViewEmployee()
-    }, [])
+    const cargarViewEmployee = async () => {
+      try {
+        const response = await viewEmployeeService();
+        setViewEmployee(response);
+      } catch (error) {
+        console.error("Error al obtener la vista de empleados", error);
+      }
+    };
+  
+    useEffect(() => {
+      cargarViewEmployee();
+    }, []);
     return (
     <Container>
             {console.log(viewEmployee)}
@@ -37,7 +35,7 @@ function ViewEmployeeTable () {
                 <tr key={view.id}>
                     <td>{view.id}</td>
                     <td>{view.name}</td>
-                    <td>{view.role_name}</td>
+                    <td>{view.role__name}</td>
                     <td>{view.email}</td>
                     <td>{view.phone}</td>
                 </tr>
