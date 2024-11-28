@@ -8,7 +8,7 @@ const crear= (data)=> axios.post(url, data)
 const actualizar= (id, data)=> axios.put(`${url}/${id}`, data)
 const eliminar= (id)=> axios.delete(`${url}/${id}`)
 
-const employeeApi= {
+const employeeService = {
     obtenerTodas,
     obtenerPorId,
     crear,
@@ -16,4 +16,4 @@ const employeeApi= {
     eliminar
 }
 
-export default employeeApi
+export default employeeService
