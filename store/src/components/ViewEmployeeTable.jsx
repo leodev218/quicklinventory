@@ -7,8 +7,8 @@ function ViewEmployeeTable () {
 
     const cargarViewEmployee = async () => {
       try {
-        const response = await viewEmployeeService();
-        setViewEmployee(response);
+        const response = await viewEmployeeService([]);
+        setViewEmployee(response)
       } catch (error) {
         console.error("Error al obtener la vista de empleados", error);
       }
