@@ -16,7 +16,7 @@ function App() {
   return (
   <Router>
     <Navigation/>
-      <Container fluid>
+      <Container flex>
         <Routes>
           <Route path='/' element = {<Home/>}/>
           <Route path='/products' element = {<Products/>}/>
