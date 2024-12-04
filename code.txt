@@ -70,3 +70,25 @@
              Guardar
            </Button>
        </Form>
+
+  class PurchaseInvoice(models.Model):
+    order = models.ForeignKey(OrderSupplier, on_delete=models.CASCADE, null=True)
+    invoice_date = models.DateTimeField(auto_now_add=True)
+    total_amount = models.DecimalField(max_digits=10, decimal_places=2, editable=False)
+
+    def save(self, *args, **kwargs):
+        # Calcular el total_amount sumando todos los PurchaseItem relacionados con el mismo order_supplier
+        if self.order:
+            self.total_amount = sum(item.item_total for item in PurchaseItem.objects.filter(order_supplier=self.order))
+        else:
+            self.total_amount = 0  # O manejar el caso donde no hay order
+
+        super().save(*args, **kwargs)
+        
+        # Aumentar el stock de los productos en la factura de compra
+        self.adjust_stock_increase()
+
+    def adjust_stock_increase(self):
+        for item in self.order.purchaseitem_set.all():
+            item.product.stock += item.quantity
+            item.product.save()

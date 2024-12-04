@@ -2,8 +2,8 @@ from rest_framework import viewsets
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .models import Role, Employee, Status, Supplier, Customer, Category, Product, Order, OrderItem, Invoice
-from .serializers import RoleSerializer, EmployeeSerializer, StatusSerializer, SupplierSerializer, CustomerSerializer, CategorySerializer, ProductSerializer, OrderSerializer, OrderItemSerializer, InvoiceSerializer
+from .models import Role, Employee, Status, Supplier, Customer, Category, Product, OrderSupplier, OrderCustomer, PurchaseItem, SalesItem, PurchaseInvoice, SalesInvoice
+from .serializers import RoleSerializer, EmployeeSerializer, StatusSerializer, SupplierSerializer, CustomerSerializer, CategorySerializer, ProductSerializer, OrderSupplierSerializer, OrderCustomerSerializer,PurchaseItemSerializer, SalesItemSerializer,PurchaseInvoiceSerializer, SalesInvoiceSerializer
 
 class RoleViewSet(viewsets.ModelViewSet):
     queryset = Role.objects.all()
@@ -33,20 +33,32 @@ class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
-class OrderViewSet(viewsets.ModelViewSet):
-    queryset = Order.objects.all()
-    serializer_class = OrderSerializer
+class OrderSupplierViewSet(viewsets.ModelViewSet):
+    queryset = OrderSupplier.objects.all()
+    serializer_class = OrderSupplierSerializer
     
-class OrderItemViewSet(viewsets.ModelViewSet):
-    queryset = OrderItem.objects.all()
-    serializer_class = OrderItemSerializer
-    
-class InvoiceViewSet(viewsets.ModelViewSet):
-    queryset = Invoice.objects.all()
-    serializer_class = InvoiceSerializer
-    
+class OrderCustomerViewSet(viewsets.ModelViewSet):
+    queryset = OrderCustomer.objects.all()
+    serializer_class = OrderCustomerSerializer
+
+class PurchaseItemViewSet(viewsets.ModelViewSet):
+    queryset = PurchaseItem.objects.all()
+    serializer_class = PurchaseItemSerializer
+
+class SalesItemViewSet(viewsets.ModelViewSet):
+    queryset = SalesItem.objects.all()
+    serializer_class = SalesItemSerializer
+        
+class PurchaseInvoiceViewSet(viewsets.ModelViewSet):
+    queryset = PurchaseInvoice.objects.all()
+    serializer_class = PurchaseInvoiceSerializer
+
+class SalesInvoiceViewSet(viewsets.ModelViewSet):
+    queryset = SalesInvoice.objects.all()
+    serializer_class = SalesInvoiceSerializer
+  
 #Vista personalizada    
 class EmployeeRoleView(APIView):
     def get(self, request):
-        employees = Employee.objects.select_related('role').values('id', 'name', 'role__name', 'role__salary','email', 'phone')
+        employees = Employee.objects.select_related('role').values('id', 'employee_name', 'role__role_name', 'role__salary','email', 'phone')
         return Response(employees)

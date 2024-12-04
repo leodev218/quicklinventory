@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'api_inventory.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'inventory-v3',
+        'NAME': 'inventory1.4',
         'USER': 'postgres',
         'PASSWORD': 'mlo218',
         'HOST': 'localhost',
