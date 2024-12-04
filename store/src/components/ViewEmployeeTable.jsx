@@ -1,4 +1,5 @@
-import { useEffect,useState } from "react"
+// eslint-disable-next-line no-unused-vars
+import {React,useEffect,useState } from "react"
 import { Container,Table } from "react-bootstrap"
 import viewEmployeeService from "../service/viewEmployeeService"
 
@@ -19,7 +20,6 @@ function ViewEmployeeTable () {
     }, []);
     return (
     <Container>
-            {console.log(viewEmployee)}
         <Table triped bordered hover responsive="sm">
             <thead>
                 <tr>

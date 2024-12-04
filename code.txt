@@ -1,0 +1,72 @@
+ <Form.Group className="mb-3">
+                <Form.Label>Nombre</Form.Label>
+              <Form.Control 
+                  type="text" 
+                  name='name'
+                  placeholder="Nombre del empleado" 
+                  value={employee.name}
+                  onChange={handleChange}
+                  isInvalid={!!errors.name}
+              />
+              <Form.Control.Feedback type='invalid'>
+                  {errors.name}
+              </Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group className="mb-3">
+                <Form.Label>Correo</Form.Label>
+              <Form.Control 
+                  type="text" 
+                  name='email'
+                  placeholder="Correo electronico" 
+                  value={employee.email}
+                  onChange={handleChange}
+                  isInvalid={!!errors.email}
+              />
+              <Form.Control.Feedback type='invalid'>
+                  {errors.email}
+              </Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group className="mb-3">
+                <Form.Label>Telefono</Form.Label>
+              <Form.Control 
+                  type="text" 
+                  name='phone'
+                  placeholder="Telefono del empleado" 
+                  value={employee.phone}
+                  onChange={handleChange}
+                  isInvalid={!!errors.phone}
+              />
+              <Form.Control.Feedback type='invalid'>
+                  {errors.phone}
+              </Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group className="mb-3">
+                <Form.Label>Cargo</Form.Label>
+              <Form.Control 
+                  type="number" 
+                  name='role'
+                  placeholder="Cargo del empleado" 
+                  value={employee.role}
+                  onChange={handleChange}
+                  isInvalid={!!errors.role}
+              />
+              <Form.Control.Feedback type='invalid'>
+                  {errors.role}
+              </Form.Control.Feedback>
+            </Form.Group>
+
+
+            <EmployeeForm
+                            employee = {selectedEmployee}
+                            setEmployee = {setSelectedEmployee}
+                            errors = {errors}
+                            handleSave ={handleSave}
+                        />
+
+
+                          <Form>    
+           
+           <Button variant="info" onClick={handleSave}>
+             Guardar
+           </Button>
+       </Form>

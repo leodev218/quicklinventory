@@ -1,28 +1,10 @@
-import { useEffect,useState } from "react"
-import { Container,Table } from "react-bootstrap"
-import employeeService from '../service/employeeService'
+import { Table, Button} from "react-bootstrap"
 
-function EmployeeTable (){
-    const [employeeTable, setEmployeeTable] = useState([])
-    
-    const cargarEmployeeTable = async () => {
-        try {
-            const response = await employeeService.obtenerTodas([])
-            setEmployeeTable(response.data)
-            
-        } catch (error) {
-            console.error("Error al obtener la tabla de empleados",error)
-        }
-    }
-
-    useEffect(() => {
-        cargarEmployeeTable();
-    }, [])
-    
-
+// eslint-disable-next-line react/prop-types
+function EmployeeTable ({ employees, viewDetail, handleShow, handleDelete }){
+   
     return (
         <>
-            <Container>
                 <Table bordered hover responsive="sm">
                     <thead>
                        <tr> 
@@ -31,21 +13,29 @@ function EmployeeTable (){
                         <th>Correo</th>
                         <th>Telefono</th>
                         <th>Cargo</th>
+                        <th>Opciones</th>
                        </tr> 
                     </thead>
                     <tbody>
-                        {employeeTable.map(employee => (
-                            <tr key={employee.id}>
+                        
+                        {// eslint-disable-next-line react/prop-types
+                        employees.map(employee => (
+                          <tr key={employee.id} onClick={() => viewDetail(employee.id)}>
                             <td>{employee.id}</td>
                             <td>{employee.name}</td>
                             <td>{employee.email}</td>
                             <td>{employee.phone}</td>
                             <td>{employee.role}</td>
-                           </tr>
+                            <td className="d-grid">
+                                <Button className="m-1 rounded-0" size="sm" variant="info" 
+                                    onClick={e => { e.stopPropagation(); handleShow(employee) }} >Editar</Button>
+                                <Button className="m-1 rounded-0" size="sm" variant="dark"
+                                    onClick={e => { e.stopPropagation(); handleDelete(employee.id) }} >Elliminar</Button>
+                            </td>
+                          </tr>
                         ))}   
                     </tbody>
                 </Table>
-            </Container>
         </>)
 }
 export default EmployeeTable
