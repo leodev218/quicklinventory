@@ -35,8 +35,8 @@ function ViewEmployeeTable () {
                 {viewEmployee.map(view => (
                 <tr key={view.id}>
                     <td>{view.id}</td>
-                    <td>{view.name}</td>
-                    <td>{view.role__name}</td>
+                    <td>{view.employee_name}</td>
+                    <td>{view.role__role_name}</td>
                     <td>{view.role__salary}</td>
                     <td>{view.email}</td>
                     <td>{view.phone}</td>
