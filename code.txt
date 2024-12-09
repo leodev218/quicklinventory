@@ -92,3 +92,17 @@
         for item in self.order.purchaseitem_set.all():
             item.product.stock += item.quantity
             item.product.save()
+
+
+ <Button onClick={handleShow} className="rounded-0 mt-1 mb-1 border-0" variant="primary">
+                    <HiOutlinePlusSm className="mb-1"/> Agregar producto
+                </Button>
+                <Modal show={show} onHide={handleClose} className="p-2">
+                    <Modal.Title className="ms-3"> Crear producto</Modal.Title>
+                   <Modal.Body>
+                        <ProductForm
+                            className="rounded-0"
+                            handleClose = {handleClose}
+                        />
+                    </Modal.Body> 
+                </Modal>

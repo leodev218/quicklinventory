@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navigation from './layouts/Navigation'
 import Home from './pages/Home'
 import Products from './pages/Products'
+import ProductForm from './components/ProductForm'
 import Info from './pages/Info'
 import Perfil from './pages/Perfil'
 import './css/App.css'
@@ -20,6 +21,8 @@ function App() {
         <Routes>
           <Route path='/' element = {<Home/>}/>
           <Route path='/products' element = {<Products/>}/>
+          <Route path='/products/:id' element = {<ProductForm/>}/>
+          <Route path='/products-add' element = {<ProductForm/>}/>
           <Route path='/info' element = {<Info/>}/>
           <Route path='/perfil' element = {<Perfil/>}/>
           <Route path='/employee' element = {<Empleado/>}/>
