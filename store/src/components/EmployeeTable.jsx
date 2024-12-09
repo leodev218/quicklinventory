@@ -10,6 +10,7 @@ function EmployeeTable ({ employees, viewDetail, handleShow, handleDelete }){
                        <tr> 
                         <th>Id</th>
                         <th>Nombre</th>
+                        <th>Documento</th>
                         <th>Correo</th>
                         <th>Telefono</th>
                         <th>Cargo</th>
@@ -22,7 +23,8 @@ function EmployeeTable ({ employees, viewDetail, handleShow, handleDelete }){
                         employees.map(employee => (
                           <tr key={employee.id} onClick={() => viewDetail(employee.id)}>
                             <td>{employee.id}</td>
-                            <td>{employee.name}</td>
+                            <td>{employee.employee_name}</td>
+                            <td>{employee.document}</td>
                             <td>{employee.email}</td>
                             <td>{employee.phone}</td>
                             <td>{employee.role}</td>
