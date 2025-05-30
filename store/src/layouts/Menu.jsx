@@ -24,7 +24,7 @@ function Menu({ ...props }) {
         <Offcanvas.Header className='navbar text-light' closeButton>
           <Offcanvas.Title>Opciones</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body className='bg-light'>  
+        <Offcanvas.Body className='bg-light rounded-0'>
             <CardGroup>
               <Card border='light'>
                 <Card.Img variant='top' src={logo}/>

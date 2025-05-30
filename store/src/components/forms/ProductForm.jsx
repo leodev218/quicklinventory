@@ -2,8 +2,8 @@ import { useNavigate, useParams } from "react-router-dom"
 import {useForm} from "react-hook-form"
 import { Container, Form } from "react-bootstrap"
 import { HiOutlineSave, HiOutlineHand, HiOutlineTrash } from "react-icons/hi"
-import productService from "../service/productService"
-import categoryService from "../service/categoryService"
+import productService from "../../service/productService"
+import categoryService from "../../service/categoryService"
 import { useEffect, useState } from "react"
 
 function ProductForm () {
@@ -68,7 +68,7 @@ function ProductForm () {
             <Form.Label>Nombre del producto</Form.Label>
               <Form.Control 
                 type="text"
-                placeholder="Ingrese el nombre y apellido"
+                placeholder="Ingrese el nombre del producto"
                 {...register("product_name",{required: true})}              
               />
                 {errors.product_name && <span>Error de input</span>}
@@ -104,7 +104,7 @@ function ProductForm () {
             <Form.Label>Cantidad del producto</Form.Label>
               <Form.Control 
                 type="text"
-                placeholder="Ingrese el nombre y apellido"
+                placeholder="Ingrese la cantidad del producto"
                 {...register("stock",{required: true})}              
               />
               {errors.stock && <span>Error de input</span>}
